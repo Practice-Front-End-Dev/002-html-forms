@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sign Up Form</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css">
+		<!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms -->
+	</head>
+	<body>
+
+		<!-- "action" attribute = web address of program that processes the information, , "method" attribute = http method the browser uses to submit the form ("post" or "get")  --> 
+		<form action="index.html" method="post">
+			
+			<h1>Instant Free Trial</h1>
+			
+
+
+			<!-- Visually dispaly form controls in a logical grouping w/ "fieldset" element -->
+			<!-- BASIC INFORMATION FIELDSET -->
+			<fieldset>
+				<!-- further label fieldsets with "legend" element -->
+				<!--  "span" element inserted to number each section as if it were a step in a process (class="number" pulls styling from our css file) -->
+				<legend><span class="number">1</span> Your basic info</legend>
+
+				<!-- "input is self-closing, "type" = type of input, "id" = useful for label element/css/javascript, "name" =  variable name for server -->
+				<label for="name">Name:</label> <!-- "for" attribute associates label with form element (id - in this case if we click on name the "user_name" input comes into focus)  -->
+				<input type="text" id="name" name="user_name">
+				
+				<label for="mail">Email address</label>
+				<input type="email" id="mail" name="user_email">
+				
+				<label for="password">Create a password</label>
+				<input type="password" id="password" name="user_password">
+
+				<!-- "radio buttons" are better when their are fewer options, because they show you all of the options at once -->
+				<label>Age:</label> <!-- no "for" attribute because nothing to asscoiate it with (purely styling purposes) -->
+				<!-- Below it's important to use the same "name" attribute so the browser associates both radio buttons as one group (user can only select one at a time) -->
+				<input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label></br>
+				<input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+
+			</fieldset>
+
+
+
+			<!-- USER PROFILE INFO FIELDSET -->
+			<fieldset>
+				<legend><span class="number">2</span> Your profile</legend>
+
+				<!-- "select" element enables us to use a dropdown selector (need "option" elements inside for this to work) -->
+				<label for="job">Job role</label>
+				<select id=job" name="user_job">
+					<!-- organize list "options" with "optgroup" element and label "atribute" (not element) -->
+					<optgroup label="Web">
+						<!-- "value" is used on the server side -->
+						<option value="frontend_developer">Front-End Developer</option>
+						<option value="backend_developer">Back-End Developer</option>
+						<option value="fullstack_developer">Full Stack Developer</option>
+					</optgroup>
+					<optgroup label="Mobile">
+						<option value="android_developer">Android Developer</option>
+						<option value="ios_developer">iOS Developer</option>
+					</optgroup>
+					<optgroup label="Creative">
+						<option value="ui_designer">UI Designer</option>
+						<option value="ux_researcher">UX Researcher</option>
+						<option value="content_producer">Content Creator</option>
+					</optgroup>
+					<optgroup label="Business">
+						<option value="product_manager">Product Manager</option>
+						<option value="sales_manager">Sales Manager</option>
+						<option value="customer_support">Customer Support</option>
+						<option value="project_manager">Project Manager</option>
+					</optgroup>
+				</select>
+
+				<!-- "textarea" allowing users to type a bio about themselves ("style" = for fun) -->
+				<label for="bio">Tell us about yourself:</label>
+				<textarea id="bio" name="user_bio" 
+					style="min-height: 90px; min-width: 100%; max-width: 100%;"></textarea>
+
+				<!-- use checkboxes to select multiple radio buttons ... -->
+				<!-- note: by defining an id and matching the "for" attribute (label) the user can click the text to select the checkbox -->
+				<label>Defining personality traits</label>
+				<input type="checkbox" id="studious" value="trait_studious" name="user_trait"><label class="light" for="studious">A+ student</label></br>
+				<input type="checkbox" id="smart" value="trait_smart" name="user_trait"><label class="light" for="smart">Street smart</label></br>
+				<input type="checkbox" id="clever" value="trait_clever" name="user_trait"><label class="light" for="clever">Thrifty with &dollar;</label></br>
+				<input type="checkbox" id="stubborn" value="trait_stubborn" name="user_trait"><label class="light" for="stubborn">Tough as nails</label></br>
+				<input type="checkbox" id="athletic" value="trait_athletic" name="user_trait"><label class="light" for="athletic">Physically gifted</label></br>
+				<input type="checkbox" id="mean" value="trait_mean" name="user_trait"><label class="light" for="mean">Not a nice person ...</label>
+			</fieldset>
+
+
+
+			<!-- default behavior of type="submit" = submit form and send data to server -->
+			<button type="submit">Sign Up</button>
+
+
+
+
+
+		</form>
+
+
+
+
+
+
+
+	</body>
+</html>
+
