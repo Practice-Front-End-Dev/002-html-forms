@@ -1,3 +1,3 @@
 # html-forms
 
-https://practice-web-dev.github.io/html-forms/
+https://practice-front-end-dev.github.io/html-forms/
