@@ -1,3 +1,3 @@
 # html-forms
 
-https://practice-full-stack-dev.github.io/html-forms/
+https://practice-full-stack.github.io/html-forms/
